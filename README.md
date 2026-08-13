@@ -6,16 +6,17 @@ This repository contains my public-safe work for the **General AI Fluency** trac
 
 | Assignment | Status | Evidence |
 |---|---|---|
-| FL-01 — AI Workflow Audit and Tool Setup | Written audit and Anthropic Academy course completion verified; Claude Project evidence pending | `ai_fluency/FL-01/` |
+| FL-01 — AI Workflow Audit and Tool Setup | Submitted to FlyRank; written audit, Academy certificate, and redacted Claude Project evidence | `ai_fluency/FL-01/` |
+| Week 1 — Draw the Path: Portfolio Sitemap + Toolkit | Sitemap, tool plan, digital diagram, pressure-test transcript, and documented revision | `ai_fluency/CUSTOM-MQWZGZCD-45C6C6BE/` |
+| Week 1 — What Are You Proving? | One-claim, one-person, one-action proof statement grounded in the capstone | `ai_fluency/CUSTOM-MQWZHD18-5B447868/` |
 
 ## Repository structure
 
 ```text
 ai_fluency/
-└── FL-01/
-    ├── FL-01_AI_Workflow_Audit_Umer_Sajid.docx
-    ├── workflow_audit.md
-    └── EVIDENCE_CHECKLIST.md
+├── FL-01/
+├── CUSTOM-MQWZGZCD-45C6C6BE/  # Portfolio Sitemap + Toolkit
+└── CUSTOM-MQWZHD18-5B447868/  # What Are You Proving?
 ```
 
 ## FL-01 summary

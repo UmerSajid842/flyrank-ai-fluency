@@ -1,0 +1,111 @@
+# Workflow Run: capstone_model_report
+
+| Field | Value |
+|---|---|
+| Source | `/home/ubuntu/flyrankmlproject-source/outputs/model_report.md` |
+| Run time (UTC) | 2026-08-13T17:56:13.039688+00:00 |
+| Model | `gpt-5-mini` |
+| Measured workflow time | 73.38 seconds |
+| Publication status | **Not published — human review required** |
+
+## Step 1 — Source packet
+
+**Purpose:** Model report for a content refresh ranking model (ranks existing content for refresh review) generated from the bundled anonymized starter dataset.
+
+## Step 2 — Structured evidence extraction
+
+### Verified facts
+
+- Report generated from bundled anonymized starter dataset (`data/raw/content_refresh_anonymized.csv`).
+- The model ranks existing content for refresh review.
+- The model does not use titles, URLs, client names, domains, or keywords.
+- Rows scored: 30,000.
+- Declining-label rows: 16,262.
+- Declining-label rate: 0.542.
+- Split strategy used for validation: client_holdout.
+- Target: `is_declining_label`.
+- Best model: `random_forest` selected by `precision_at_50`.
+- Model comparison metrics (as reported):
+- decision_tree — ROC AUC: 0.742, Avg precision: 0.575, Precision@50: 0.620, Recall: 0.716, F1: 0.634.
+- logistic_regression — ROC AUC: 0.700, Avg precision: 0.522, Precision@50: 0.400, Recall: 0.567, F1: 0.566.
+- random_forest — ROC AUC: 0.747, Avg precision: 0.610, Precision@50: 0.680, Recall: 0.741, F1: 0.638.
+- baseline_rules — ROC AUC: 0.627, Avg precision: 0.468, Precision@50: 0.240 (Recall and F1 shown as '-').
+- Final queue counts: High-confidence items: 3,576; Medium-confidence items: 11,424; Low-confidence items: 15,000.
+- Action counts in final queue: `monitor` items: 13,069; `refresh` items: 8,207; `refresh_and_review_ctr` items: 6,655; `refresh_and_review_engagement` items: 1,987; `expand_and_refresh` items: 82.
+- Top features and importances (as reported): `days_with_impressions`: 0.1606; `log_impressions_90d`: 0.1285; `avg_position`: 0.1084; `content_age_days`: 0.0950; `word_count`: 0.0412; `char_count`: 0.0398; `ctr`: 0.0332; `log_clicks_90d`: 0.0325; `scroll_rate`: 0.0309; `days_with_sessions`: 0.0299.
+- Top 10 Queue Preview includes rank, score, model probability, action, reasons, impressions, sessions, and trend for the top 10 rows (examples shown for ranks 1–10).
+- Examples from Top 10 Queue Preview (as reported):
+- Rank 1 — Score: 81.9, Model probability: 0.786, Action: refresh_and_review_ctr, Reasons: declining_with_demand; low_ctr_visible_page; low_engagement_visible_page; model_decline_risk; visible_model_opportunity; ctr_review_candidate; engagement_review_candidate; Impressions: 12834; Sessions: 66; Trend: down.
+- Rank 2 — Score: 81.7, Model probability: 0.792, Action: refresh_and_review_ctr, Reasons: declining_with_demand; low_ctr_visible_page; model_decline_risk; visible_model_opportunity; ctr_review_candidate; Impressions: 8064; Sessions: 23; Trend: down.
+- Rank 3 — Score: 81.6, Model probability: 0.850, Action: refresh_and_review_ctr, Reasons: declining_with_demand; low_ctr_visible_page; model_decline_risk; visible_model_opportunity; ctr_review_candidate; Impressions: 2498; Sessions: 9; Trend: down.
+- Rank 4 — Score: 80.8, Model probability: 0.814, Action: refresh_and_review_ctr, Reasons: declining_with_demand; low_ctr_visible_page; model_decline_risk; visible_model_opportunity; ctr_review_candidate; Impressions: 3393; Sessions: 5; Trend: down.
+- Rank 5 — Score: 80.8, Model probability: 0.771, Action: refresh_and_review_ctr, Reasons: declining_with_demand; low_ctr_visible_page; model_decline_risk; visible_model_opportunity; ctr_review_candidate; Impressions: 13790; Sessions: 27; Trend: down.
+- Rank 6 — Score: 80.8, Model probability: 0.848, Action: refresh_and_review_ctr, Reasons: declining_with_demand; low_ctr_visible_page; model_decline_risk; visible_model_opportunity; ctr_review_candidate; Impressions: 1622; Sessions: 20; Trend: down.
+- Rank 7 — Score: 80.6, Model probability: 0.794, Action: refresh_and_review_ctr, Reasons: declining_with_demand; low_ctr_visible_page; model_decline_risk; visible_model_opportunity; ctr_review_candidate; Impressions: 5811; Sessions: 14; Trend: down.
+- Rank 8 — Score: 80.4, Model probability: 0.828, Action: refresh, Reasons: declining_with_demand; model_decline_risk; visible_model_opportunity; Impressions: 4366; Sessions: 8; Trend: down.
+- Rank 9 — Score: 80.2, Model probability: 0.824, Action: refresh_and_review_ctr, Reasons: declining_with_demand; low_ctr_visible_page; low_engagement_visible_page; model_decline_risk; visible_model_opportunity; ctr_review_candidate; engagement_review_candidate; Impressions: 2655; Sessions: 92; Trend: down.
+- Rank 10 — Score: 80.1, Model probability: 0.831, Action: refresh_and_review_ctr, Reasons: declining_with_demand; low_ctr_visible_page; model_decline_risk; visible_model_opportunity; ctr_review_candidate; Impressions: 2621; Sessions: 10; Trend: down.
+- Generated files listed in the report: `outputs/refresh_queue.csv`, `outputs/model_results.json`, `outputs/summary.json`, `outputs/charts/action_mix.svg`, `outputs/charts/confidence_mix.svg`, `outputs/charts/top_reason_codes.svg`, `outputs/charts/top_feature_importance.svg`, `outputs/charts/trend_distribution.svg`.
+- Practical use guidance included in the report: Use the ranked queue as a reviewer aid, not as an automatic publishing decision; safest first production use is to inspect high-confidence rows, verify the page manually, and compare the recommendation against editorial context.
+
+### Limits or unknowns
+
+- The report states the model does not use titles, URLs, client names, domains, or keywords (limitation on available identifying/contextual fields).
+- The dataset used is described as the 'bundled anonymized starter dataset' (anonymized data may limit identifiability or external generalizability; report does not provide further dataset provenance).
+- For `baseline_rules`, Recall and F1 are reported as '-' (not provided).
+- The report lists top feature names and importances but does not provide formal feature definitions beyond the names.
+- The report indicates validation used a client_holdout split but does not include additional external validation results or deployment performance metrics.
+
+### Publishable artifacts
+
+- outputs/refresh_queue.csv
+- outputs/model_results.json
+- outputs/summary.json
+- outputs/charts/action_mix.svg
+- outputs/charts/confidence_mix.svg
+- outputs/charts/top_reason_codes.svg
+- outputs/charts/top_feature_importance.svg
+- outputs/charts/trend_distribution.svg
+
+## Step 3 — Draft for human review
+
+> Draft: Report generated from bundled anonymized starter dataset (data/raw/content_refresh_anonymized.csv) for a content-refresh ranking model that ranks existing content for refresh review. Dataset: 30,000 rows; declining-label rows 16,262 (rate 0.542). Target: is_declining_label; validation split: client_holdout. Best model: random_forest selected by precision_at_50 (random_forest ROC AUC 0.747; Precision@50 0.680). Top features include days_with_impressions, log_impressions_90d, avg_position. Limitation: anonymized data and omission of titles/URLs/client identifiers restrict identifiability and contextual validation. Draft for human review, not for publication.
+
+## Step 4 — Claim audit
+
+| Audit status | Required human check |
+|---|---|
+| `revise_before_review` | Verify the numerical values quoted (row counts, declining rows and rate, random_forest metrics, feature importance values) match the source artifacts. Decide whether to include additional context present in the report before publication: other model comparison metrics (decision_tree, logistic_regression, baseline_rules), final queue confidence and action counts, Top 10 Queue Preview examples, generated output filenames, and the explicit list of omitted identifying fields (titles, URLs, client names, domains, keywords). Confirm that the anonymized dataset provenance is sufficient for the intended audience and whether the limitation wording is adequate. If publishing, consider adding the exact top feature importances and any required notes about missing baseline_rules Recall/F1 and the client_holdout-only validation. |
+
+### Supported claims
+
+- Report generated from bundled anonymized starter dataset (`data/raw/content_refresh_anonymized.csv`).
+- Model is a content-refresh ranking model that ranks existing content for refresh review.
+- Dataset: 30,000 rows.
+- Declining-label rows: 16,262 (declining-label rate: 0.542).
+- Target: `is_declining_label`.
+- Validation split: client_holdout.
+- Best model: `random_forest` selected by `precision_at_50`.
+- Reported random_forest metrics include ROC AUC 0.747 and Precision@50 0.680.
+- Top features include `days_with_impressions`, `log_impressions_90d`, and `avg_position`.
+- Limitation noted: anonymized data and omission of titles/URLs/client identifiers restrict identifiability and contextual validation.
+- Draft is intended for human review and not for publication.
+
+### Risks or missing support
+
+- Draft omits other model comparison results that appear in the report (decision_tree and logistic_regression metrics, and baseline_rules metrics).
+- For `baseline_rules`, Recall and F1 are reported in the source as '-' (not provided); draft does not mention this missing metric reporting.
+- Draft does not include numeric feature importances (e.g., `days_with_impressions`: 0.1606; `log_impressions_90d`: 0.1285; `avg_position`: 0.1084) if exact importances are required for publication.
+- Draft does not mention final queue counts by confidence (High: 3,576; Medium: 11,424; Low: 15,000) or the action counts in the final queue (e.g., `monitor`: 13,069; `refresh`: 8,207; `refresh_and_review_ctr`: 6,655; `refresh_and_review_engagement`: 1,987; `expand_and_refresh`: 82).
+- Draft omits examples from the Top 10 Queue Preview (rank, score, model probability, action, reasons, impressions, sessions, trend) that are present in the report.
+- Draft does not list the generated output files documented in the report (e.g., `outputs/refresh_queue.csv`, `outputs/model_results.json`, `outputs/summary.json`, and chart SVGs).
+- The report notes the model does not use titles, URLs, client names, domains, or keywords; the draft's limitation phrasing references omission of titles/URLs/client identifiers but does not explicitly list all omitted fields named in the report.
+- External validity and provenance beyond the 'bundled anonymized starter dataset' are not provided in the report; the draft does not add any external validation or deployment performance claims (this is a limit to be checked before publication).
+
+## Step 5 — Required human handoff
+
+The workflow stops here. A human must compare each draft sentence with the original source, confirm the document is public-safe, verify no planned work is described as complete, and decide whether to publish, revise, or discard the draft.
+
+## Timing record
+
+This measured time covers the automated source-to-audit run only. It does **not** claim that human review can be removed or that the automation replaces manual source reading. Token counts are retained in the corresponding JSON record for reproducibility.

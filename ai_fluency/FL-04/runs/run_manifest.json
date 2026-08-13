@@ -1,0 +1,27 @@
+[
+  {
+    "run": "capstone_model_report",
+    "elapsed_seconds": 73.38,
+    "status": "revise_before_review"
+  },
+  {
+    "run": "identity_kit",
+    "elapsed_seconds": 79.67,
+    "status": "revise_before_review"
+  },
+  {
+    "run": "image_curation",
+    "elapsed_seconds": 59.75,
+    "status": "revise_before_review"
+  },
+  {
+    "run": "content_cta_map",
+    "elapsed_seconds": 58.53,
+    "status": "revise_before_review"
+  },
+  {
+    "run": "stack_decision",
+    "elapsed_seconds": 70.13,
+    "status": "revise_before_review"
+  }
+]

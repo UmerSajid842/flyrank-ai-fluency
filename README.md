@@ -15,6 +15,10 @@ This repository contains my public-safe work for the **General AI Fluency** trac
 | Week 3 — Decide Once: Build Your Identity Kit | Public identity kit, one-font system, four-colour palette, monogram, and ready-to-paste Claude style note | `ai_fluency/CUSTOM-MQX00WJN-0CE9EDFA/` |
 | Week 3 — Kill Your Darlings: Curate Your Images | Real capstone work captures, keeper/reject decisions, and explicit real-versus-AI visual policy | `ai_fluency/CUSTOM-MQX033TI-DE712A19/` |
 | Week 3 — The Through-Line: Map Content & CTAs | One claim, ordered page map, aligned calls to action, and an honest proof gather list | `ai_fluency/CUSTOM-MQWZXUQU-B5F087BE/` |
+| Week 4 — Empty but Live: Ship a Blank Page | Public near-blank deployment foundation in `docs/`, using the selected static HTML/CSS stack | `docs/index.html` |
+| Week 4 — Three Roads: Choose Your Stack with AI | Three free stack options, an independent static-site decision, pressure test, and honest no-backend rationale | `ai_fluency/CUSTOM-MQX06U8B-9AAA4FBA/` |
+| FL-04 — Ship an Automation Workflow v2 | Reproducible source-to-draft-to-audit workflow, five actual runs, timing, failures, and required human checks | `ai_fluency/FL-04/` |
+| FL-05 — Agent Concepts and MCP Basics | 600–900 word explainer, recorded authenticated MCP tasks, and a safe agent-upgrade path | `ai_fluency/FL-05/` |
 
 ## Repository structure
 
@@ -29,6 +33,9 @@ ai_fluency/
 ├── CUSTOM-MQX00WJN-0CE9EDFA/  # Identity Kit
 ├── CUSTOM-MQX033TI-DE712A19/  # Image Curation
 ├── CUSTOM-MQWZXUQU-B5F087BE/  # Content and CTA Map
+├── CUSTOM-MQX06U8B-9AAA4FBA/  # Stack decision
+├── FL-04/                      # Evidence-writing workflow and five run records
+├── FL-05/                      # Agent and MCP explainer with tool-call evidence
 └── _evidence/                  # Raw, public-safe model-output evidence
 ```
 

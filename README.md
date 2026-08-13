@@ -12,6 +12,9 @@ This repository contains my public-safe work for the **General AI Fluency** trac
 | Week 2 — Frame It as Cases | Voice card, evidence-bound capstone case, bio/CTA, and generic-to-own-voice revision | `ai_fluency/CUSTOM-MQWZWF7R-9D0535B1/` |
 | Week 2 — The Prompt Ladder | Six real Claude runs, named iteration layers, observed changes, and reusable prompt | `ai_fluency/CUSTOM-MRBSNHWC-B3701520/` |
 | FL-02 — Prompting Fundamentals on Real Tasks | Six real Claude iterations plus a real final ChatGPT guest-session comparison; tutorial prerequisite explicitly tracked | `ai_fluency/FL-02/` |
+| Week 3 — Decide Once: Build Your Identity Kit | Public identity kit, one-font system, four-colour palette, monogram, and ready-to-paste Claude style note | `ai_fluency/CUSTOM-MQX00WJN-0CE9EDFA/` |
+| Week 3 — Kill Your Darlings: Curate Your Images | Real capstone work captures, keeper/reject decisions, and explicit real-versus-AI visual policy | `ai_fluency/CUSTOM-MQX033TI-DE712A19/` |
+| Week 3 — The Through-Line: Map Content & CTAs | One claim, ordered page map, aligned calls to action, and an honest proof gather list | `ai_fluency/CUSTOM-MQWZXUQU-B5F087BE/` |
 
 ## Repository structure
 
@@ -23,6 +26,9 @@ ai_fluency/
 ├── CUSTOM-MQWZWF7R-9D0535B1/  # Frame It as Cases
 ├── CUSTOM-MRBSNHWC-B3701520/  # The Prompt Ladder
 ├── FL-02/                      # Prompting Fundamentals
+├── CUSTOM-MQX00WJN-0CE9EDFA/  # Identity Kit
+├── CUSTOM-MQX033TI-DE712A19/  # Image Curation
+├── CUSTOM-MQWZXUQU-B5F087BE/  # Content and CTA Map
 └── _evidence/                  # Raw, public-safe model-output evidence
 ```
 

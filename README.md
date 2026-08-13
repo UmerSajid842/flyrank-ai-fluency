@@ -6,7 +6,7 @@ This repository contains my public-safe work for the **General AI Fluency** trac
 
 | Assignment | Status | Evidence |
 |---|---|---|
-| FL-01 — AI Workflow Audit and Tool Setup | Written audit complete; personal account/course evidence pending | `ai_fluency/FL-01/` |
+| FL-01 — AI Workflow Audit and Tool Setup | Written audit and Anthropic Academy course completion verified; Claude Project evidence pending | `ai_fluency/FL-01/` |
 
 ## Repository structure
 
@@ -22,7 +22,7 @@ ai_fluency/
 
 FL-01 maps 15 recurring tasks from my study, machine-learning portfolio, research, and job-search workflow. Each task is classified as **just me**, **delegate to AI with review**, **collaborate with AI**, or **fully automate**. The audit also defines three reusable tasks for later assignments: ML/data-science research, Python coding and debugging, and technical documentation.
 
-The written audit deliberately does **not** claim that a Claude account, ChatGPT account, Academy enrollment, or course module has been completed unless real evidence is added. Personal account and course screenshots are maintained separately or redacted before any public sharing.
+The written audit deliberately does **not** claim that a Claude account, ChatGPT account, Academy enrollment, or course module has been completed unless real evidence is reviewed. Anthropic Academy course completion was verified from the intern's certificate during submission preparation; the certificate is attached to the FlyRank submission rather than committed publicly. Claude Project and other personal-account screenshots are maintained separately or redacted before any public sharing.
 
 ## Related links
 

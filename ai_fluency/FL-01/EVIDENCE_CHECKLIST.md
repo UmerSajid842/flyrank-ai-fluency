@@ -7,13 +7,13 @@ This checklist accompanies `workflow_audit.md`. A pending item is marked complet
 | 10–15 genuine recurring tasks classified with one-line rationales | Complete | `workflow_audit.md` lists 14 tasks. |
 | At least two “just me” tasks with a reason | Complete | The audit identifies four: evidence approval, privacy review, Academy assessment, and project rehearsal. |
 | Three target tasks with measurable success definitions | Complete | The audit defines a case study, employer summary, and portfolio sitemap task. |
-| Claude account set up | Pending intern action | Do not mark complete without a real account record. |
+| Claude account and Project available | Complete | User-supplied screenshot is stored at `evidence/claude-project-setup-umer-sajid.png`. |
 | ChatGPT account set up | Pending intern action | Do not mark complete without a real account record. |
 | Anthropic Academy enrollment | Complete | Completion certificate for **AI Fluency: Framework & Foundations** was reviewed during FL-01 submission preparation; the personal certificate file is attached to the FlyRank submission rather than committed publicly. |
 | First Academy module completed | Complete | The reviewed completion certificate proves completion of the full **AI Fluency: Framework & Foundations** course, which exceeds the first-module requirement. |
-| Claude Project created with the reviewed custom instructions | Pending intern action | Paste the instructions from `workflow_audit.md`, then capture a real screenshot. |
-| Claude Project screenshot redacted and attached or committed safely | Pending intern action | Remove account email, notifications, private tabs, private prompts, client material, secrets, and tokens. |
-| FlyRank links and reviewer note prepared | In progress | Repository URL is ready. Final note and attachment will be completed after the remaining Claude Project evidence is provided. |
+| Claude Project created with the reviewed custom instructions | Needs one final verification | The screenshot proves the Project exists and shows the instruction summary under its title, but the right-side Instructions panel is not expanded. Open that panel, confirm the saved full instructions, and capture an updated screenshot. |
+| Claude Project screenshot redacted and attached or committed safely | Complete with follow-up recommended | `evidence/claude-project-setup-umer-sajid.png` is public-safe. Replace it with an updated screenshot after confirming the Instructions panel. |
+| FlyRank links and reviewer note prepared | Ready after Claude Instruction-panel confirmation | Repository URL and Academy certificate are ready; final submission should use an updated Claude screenshot that visibly confirms saved Project Instructions. |
 
 ## Screenshot safety check
 

@@ -1,0 +1,23 @@
+# Private or sensitive materials
+*.env
+*.pem
+*.key
+*.token
+secrets/
+private/
+
+# Raw data or client-identifying data
+raw_data/
+client_data/
+data/raw/
+
+# Local and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+
+# Screenshot originals; add only redacted, reviewed evidence intentionally
+screenshots/

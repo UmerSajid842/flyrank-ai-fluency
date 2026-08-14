@@ -19,6 +19,10 @@ This repository contains my public-safe work for the **General AI Fluency** trac
 | Week 4 — Three Roads: Choose Your Stack with AI | Three free stack options, an independent static-site decision, pressure test, and honest no-backend rationale | `ai_fluency/CUSTOM-MQX06U8B-9AAA4FBA/` |
 | FL-04 — Ship an Automation Workflow v2 | Reproducible source-to-draft-to-audit workflow, five actual runs, timing, failures, and required human checks | `ai_fluency/FL-04/` |
 | FL-05 — Agent Concepts and MCP Basics | 600–900 word explainer, recorded authenticated MCP tasks, and a safe agent-upgrade path | `ai_fluency/FL-05/` |
+| Week 5 — Ship the Ugly One: Personal Site | Public five-page ML Work site with real capstone evidence, truthful limitations, and pending real-person critique request | `ai_fluency/CUSTOM-MQX0BLWA-0E956776/` and [`docs/`](docs/) |
+| FL-06 — Design Your Personal Agent | Narrow evidence-safety agent design, realistic data-access plan, evaluation cases, and guardrails | `ai_fluency/FL-06/` |
+| FL-07 — Build the Agent | Working read-only evidence-safety CLI, structured audit outputs, real public URL check, evaluation records, and build log; raw screen recording remains user-dependent | `ai_fluency/FL-07/` |
+| PF-04 — Personal Website Live | Live ML Work site plus a four-section DNS/custom-domain walkthrough; custom domain and unprovided professional links are explicitly pending | `ai_fluency/PF-04/` |
 
 ## Repository structure
 
@@ -36,6 +40,10 @@ ai_fluency/
 ├── CUSTOM-MQX06U8B-9AAA4FBA/  # Stack decision
 ├── FL-04/                      # Evidence-writing workflow and five run records
 ├── FL-05/                      # Agent and MCP explainer with tool-call evidence
+├── CUSTOM-MQX0BLWA-0E956776/  # Week 5 public-site build record
+├── FL-06/                      # Personal-agent design specification
+├── FL-07/                      # Working evidence-safety agent and test records
+├── PF-04/                      # DNS and custom-domain walkthrough
 └── _evidence/                  # Raw, public-safe model-output evidence
 ```
 

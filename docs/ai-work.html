@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Umer Sajid’s AI Work capstone: an evidence-safe portfolio companion and public ML Work site.">
+  <title>AI Work | Umer Sajid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Umer Sajid <span>/</span> AI Work</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">ML Work</a>
+      <a href="ai-work.html" aria-current="page">AI Work</a>
+      <a href="case-study.html">Case study</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <p class="eyebrow">General AI Fluency capstone</p>
+      <h1>Evidence-Safe Portfolio Companion</h1>
+      <p class="lede">A public ML Work site paired with a small, read-only personal agent that reviews proposed portfolio wording before a human publishes it.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/UmerSajid842/flyrank-ai-fluency/tree/main/ai_fluency/FL-CAP">Read the capstone evidence</a>
+        <a class="button secondary" href="https://github.com/UmerSajid842/flyrank-ai-fluency/tree/main/ai_fluency/FL-07/agent">Inspect the agent source</a>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">The problem</p>
+      <div class="grid two">
+        <div>
+          <h2>Good portfolio claims need evidence.</h2>
+          <p class="prose">A metric can be real yet still be framed too broadly. Before updating a public ML portfolio, I needed a small check that compares proposed wording with the approved case-study record and flags claims that are unsupported, sensitive, or larger than the prototype’s actual scope.</p>
+        </div>
+        <article class="card">
+          <h3>Intended outcome</h3>
+          <p>Make portfolio updates easier to review without delegating publication authority to an AI system.</p>
+          <p class="caption">The final decision to change or publish anything stays with a person.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">What I built</p>
+      <div class="grid two">
+        <article class="card">
+          <h3>Public ML Work website</h3>
+          <p>A deployed, responsive portfolio that presents a public-safe content-prioritisation case study, its evaluation result, its evidence links, and its limits.</p>
+          <a href="case-study.html">Open the ML case study</a>
+        </article>
+        <article class="card">
+          <h3>Evidence-Safe Portfolio Update Scout</h3>
+          <p>A Python CLI that accepts proposed public wording and returns one bounded recommendation: <strong>ALLOW</strong>, <strong>REVISE</strong>, <strong>BLOCK</strong>, or <strong>NEED_EVIDENCE</strong>.</p>
+          <a href="https://github.com/UmerSajid842/flyrank-ai-fluency/blob/main/ai_fluency/FL-07/agent/README.md">Read the agent guide</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">How the personal agent works</p>
+      <div class="grid two">
+        <div>
+          <h2>One narrow, repeatable review workflow</h2>
+          <ol class="prose">
+            <li>Receive a candidate sentence or short paragraph for a public ML portfolio.</li>
+            <li>Stop obvious secrets, client-identifying wording, and broad workflow claims locally.</li>
+            <li>Read only the approved public-safe case-study context and current public home-page source.</li>
+            <li>Make one read-only reachability check to the live portfolio.</li>
+            <li>Return a structured evidence decision and save a local audit record for human review.</li>
+          </ol>
+        </div>
+        <article class="card">
+          <h3>Tools and knowledge used</h3>
+          <p>The implementation combines Python guardrails, a structured <code>gpt-5-mini</code> review step, an approved Markdown evidence packet, the current public site source, and one fixed HTTPS reachability check.</p>
+          <p class="caption">It has no deployment, publishing, email, posting, booking, or write authority.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">Verified evaluation</p>
+      <div class="grid two">
+        <article class="card">
+          <div class="stat-value">7</div>
+          <p class="stat-label">Documented v2 evaluation cases cover a supported metric, unsupported business impact, production overclaiming, broad scope, unsupported metrics, client-identifying language, and an unavailable live-site check.</p>
+        </article>
+        <div>
+          <h2>One real iteration is documented.</h2>
+          <p class="prose">An overbroad claim initially received a harder stop than the desired narrower revision. I added a deterministic broad-scope guardrail and reran the case. The final behavior returned a specific public-safe rewrite rather than an unsupported general claim.</p>
+          <a href="https://github.com/UmerSajid842/flyrank-ai-fluency/blob/main/ai_fluency/FL-07/agent/evaluation_results.md">Inspect the evaluation results</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">Safety and limitations</p>
+      <div class="grid two">
+        <article class="card">
+          <h3>What the agent does not do</h3>
+          <p>It does not access datasets, client information, credentials, private notebooks, raw queries, or other secrets. It does not edit the website or publish a result.</p>
+        </article>
+        <article class="card">
+          <h3>What its output means</h3>
+          <p>An <strong>ALLOW</strong> is advisory, not permission to publish. The agent cannot validate new metrics, jobs, production status, or business outcomes outside its intentionally narrow evidence packet.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">Project record</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/UmerSajid842/flyrank-ai-fluency/blob/main/ai_fluency/FL-CAP/capstone_requirements.md">Capstone brief and requirement record</a>
+        <a class="button secondary" href="https://github.com/UmerSajid842/flyrank-ai-fluency/blob/main/ai_fluency/FL-07/build_log.md">Build and iteration log</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© Umer Sajid · Public-safe AI Work · August 2026</footer>
+</body>
+</html>

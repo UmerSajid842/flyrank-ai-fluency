@@ -33,4 +33,8 @@ The wording does not introduce new performance, production, traffic, revenue, SE
 
 ## Verification plan
 
-After publication, the updated public pages will be checked at desktop and narrow-phone widths to confirm that the outcome summaries are visible, readable, and responsive. The same public evidence links will remain available for reviewer inspection.
+## Post-publication verification
+
+The reviewer-driven outcome emphasis was published in commit `1d5f748`. A cache-bypassed request to the public homepage returned the new “Outcome at a glance” section and the `+0.200` comparison copy, confirming that the deployed HTML contains the updated ML outcome summary. The existing public case-study link remains the route to inspect the full method and limitations.
+
+The same public evidence links remain available for reviewer inspection. A 390 × 844 pixel Chromium render of the published homepage confirmed the responsive navigation remained spacious, the primary actions remained full-width and readable, and the new outcome panel began immediately after the introductory actions without horizontal overflow. The render is stored as `week9_live_mobile_390.png` in this evidence folder and is labeled as a browser render, not a physical-phone capture.

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "stat value on white card",
+    "foreground": "#B64231",
+    "background": "#FFFFFF",
+    "ratio": 5.51,
+    "meets_normal_text_4_5_to_1": true
+  },
+  {
+    "name": "standard teal link on paper",
+    "foreground": "#0F766E",
+    "background": "#FAFAF8",
+    "ratio": 5.24,
+    "meets_normal_text_4_5_to_1": true
+  },
+  {
+    "name": "focus outline on paper",
+    "foreground": "#172033",
+    "background": "#FAFAF8",
+    "ratio": 15.57,
+    "meets_normal_text_4_5_to_1": true
+  }
+]

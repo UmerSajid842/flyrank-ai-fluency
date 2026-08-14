@@ -1,0 +1,60 @@
+{
+  "model": "gpt-5-mini",
+  "input_files": [
+    "docs/index.html",
+    "docs/case-study.html",
+    "docs/site.css"
+  ],
+  "audit": {
+    "scope": "Review of the supplied static HTML and CSS files (docs/*.html and docs/site.css). Focus areas: focus indication, touch target sizing, responsive layout, link clarity, heading/navigation structure, color reliance, and image alt text. No device, screen reader, or network testing was performed \u2014 findings are based only on the provided source.",
+    "strengths": [
+      "Skip link present and moves into view on focus (a.skip-link -> href=\"#main-content\").",
+      "Keyboard focus styling is defined for interactive anchors (a:focus-visible sets a 3px outline with offset and border-radius).",
+      "Primary action links use a filled button style (high visual prominence) and have an adequate min-height (button min-height: 2.85rem).",
+      "Responsive rules included: .grid.two collapses to one column and the header stacks at max-width: 43rem.",
+      "Navigation has an accessible landmark/label (nav aria-label=\"Primary navigation\") and uses aria-current on the active page.",
+      "Important image includes descriptive alt text (case-study.html: case-visual alt describes the chart)."
+    ],
+    "findings": [
+      {
+        "severity": "important",
+        "evidence": "site.css: nav a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .35rem .15rem; } and many inline links (for example, <a> inside prose and .link-list) have no min-height or padding rules.",
+        "risk": "Tap targets for small inline links (nav items and text links in paragraphs/list) may be smaller than recommended for fat-finger use on mobile, increasing activation errors and frustration.",
+        "recommended_change": "Increase the interactive hit area for all links on small viewports. For example, add a rule for general anchors or specific selectors: \"a, .link-list a { min-height: 2.75rem; padding: .5rem .6rem; display: inline-flex; align-items: center; }\" or add touch-target padding via media query for max-width: 43rem so links meet ~44px target."
+      },
+      {
+        "severity": "important",
+        "evidence": "site.css: .button and nav a rely on outlines for keyboard focus (a:focus-visible { outline: 3px solid var(--ink); ... }). The skip link uses :focus to reveal ( .skip-link:focus { top: 1rem; } ).",
+        "risk": "Although focus-visible is defined, there is no explicit visible focus style beyond outline for some states. On elements with filled backgrounds (e.g. .button.primary background: var(--teal)), the outline may be less visually prominent for some users or may not meet a visible focus contrast expectation on every background.",
+        "recommended_change": "Ensure focus is visually obvious on all interactive elements and across backgrounds: add a focus-visible style that includes a contrasting ring or box-shadow and/or change the outline color for filled controls. Example: \".button:focus-visible { box-shadow: 0 0 0 3px accentColor; outline: none; }\". Also consider using :focus-visible for the skip link to avoid unexpected visual jump on mouse activation: \".skip-link:focus-visible { top:1rem; }\""
+      },
+      {
+        "severity": "minor",
+        "evidence": "Navigation markup uses a sequence of anchor elements inside <nav> (nav contains multiple <a> elements) rather than an explicit list (<ul>/<li>) grouping.",
+        "risk": "Assistive technology users may still be able to navigate the links, but a list structure provides clearer semantic grouping and easier announcement of link counts in some ATs. Current structure is functional but less semantic.",
+        "recommended_change": "Consider wrapping nav links in a list (ul > li > a) to improve semantic grouping, or add an aria role/label that indicates grouping if keeping the current markup."
+      },
+      {
+        "severity": "minor",
+        "evidence": "site.css uses color to style several contextual elements (e.g. .section-kicker color: var(--teal); .stat-value color: #B64231; .notice uses a coral left border) while the markup does not provide an explicit non-color indicator for those pieces.",
+        "risk": "If color is the only visual distinction relied upon (for example to convey status), users with low vision or color deficiencies may miss the cue. In this site the colored elements also include text, but some visual affordances (border-left alone) are weaker for some users.",
+        "recommended_change": "Avoid conveying meaning by color alone. Where color indicates status or emphasis, supplement with text labels, icons, or stronger non-color styling (bold, borders with sufficient contrast, explicit labels). For example add an icon or prepend text like \"Notice:\" in .notice for clarity."
+      },
+      {
+        "severity": "minor",
+        "evidence": "Most interactive items are anchors. Inline links inside paragraphs and .link-list have no explicit target/rel attributes for external links (e.g. the GitHub links).",
+        "risk": "This is not strictly an accessibility failure, but opening external resources without an indication (visual or programmatic) can be disorienting for users who rely on context. Screen reader users won't be warned that a link opens a new site unless labeled.",
+        "recommended_change": "Where links navigate off-site, consider adding an accessible indicator in link text (e.g. \"Inspect the code (opens GitHub)\"), or use rel and visually-hidden text to indicate external destinations."
+      }
+    ],
+    "limitations": [
+      "This audit inspected only the provided static HTML and CSS sources (docs/*.html and docs/site.css). No testing on a physical mobile device, touchscreen, or with a screen reader was performed.",
+      "No automated color-contrast calculations or runtime interaction checks were performed; contrast/pass judgments were avoided unless explicit in source.",
+      "Runtime behaviors that depend on JavaScript, browser defaults, or server behavior were not evaluated (no JS files were provided)."
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 3832,
+    "completion_tokens": 3736
+  }
+}

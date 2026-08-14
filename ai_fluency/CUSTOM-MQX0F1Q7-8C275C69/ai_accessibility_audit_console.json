@@ -1,0 +1,66 @@
+{
+  "model": "gpt-5-mini",
+  "input_files": [
+    "docs/index.html",
+    "docs/case-study.html",
+    "docs/site.css"
+  ],
+  "audit": {
+    "scope": "Static review of docs/index.html, docs/case-study.html, and docs/site.css \u2014 focused on mobile accessibility cues: focus indication, touch target sizing, responsive layout, link clarity, heading/navigation structure, color reliance, and image alt text.",
+    "strengths": [
+      "Semantic landmarks are present (header, main, footer) and primary navigation uses aria-label=\"Primary navigation\".",
+      "Clear heading structure: each page has a single H1 and subordinate H2/H3 sections.",
+      "Responsive CSS: typography uses clamp(), grid.two collapses to one column in the @media (max-width: 43rem) rule, and actions use flex-wrap \u2014 generally mobile-friendly layout behaviour.",
+      "Primary CTA buttons have an explicit min-height (.button { min-height: 2.85rem; }) which meets common touch target height recommendations (~44px).",
+      "Images include alt text (case-study.html: img.case-visual alt describes the chart), supporting non-visual consumption of the key visual.",
+      "Active navigation state is exposed with aria-current=\"page\" on the current nav link."
+    ],
+    "findings": [
+      {
+        "severity": "important",
+        "evidence": "site.css does not define any :focus or :focus-visible rules for interactive elements; buttons and links are styled but there is no custom focus styling (no selectors like a:focus, .button:focus, :focus-visible in site.css).",
+        "risk": "Keyboard and switch-device users (including some mobile assistive workflows) may have poor visibility of the currently focused element or inconsistent focus presentation across browsers; relying on default focus alone may be insufficient in some UA styles or when custom visuals overlap the outline.",
+        "recommended_change": "Add explicit, high-contrast focus styles (preferably using :focus-visible) for all interactive elements (a, .button, nav links, link-list items). Ensure the focus indicator is thick and has good contrast against the background and does not rely on color alone."
+      },
+      {
+        "severity": "important",
+        "evidence": "nav a have no explicit padding (nav a { font-size: .85rem; text-decoration: none; }) and spacing is controlled by the nav flex gap. The header layout uses padding on the container but individual nav links lack a defined hit area.",
+        "risk": "Touch targets (especially narrow inline nav links) may be too small or too close together for comfortable and reliable tapping on small screens, increasing mis-taps for people with motor impairments.",
+        "recommended_change": "Increase the tappable area of navigation links by adding generous padding (eg. min-height >= 44px and horizontal padding), or convert nav links to buttons/blocks on small screens. Ensure a minimum reachable touch target of about 44 CSS pixels."
+      },
+      {
+        "severity": "important",
+        "evidence": "nav a use color and removal of text-decoration (nav a { text-decoration: none; } and a { color: var(--teal); }) while only the current item gets an underline (nav a[aria-current=\"page\"] { color: var(--ink); text-decoration: underline; }).",
+        "risk": "Link identity or state may be conveyed by color alone for many links (no underline or other non-color cue), which is problematic for users with color vision deficiencies or when color rendering is altered on-device.",
+        "recommended_change": "Provide a non-color indicator for links (for example keep an underline or add an icon/underline on focus/hover) and ensure the active state is perceivable without relying solely on color differences."
+      },
+      {
+        "severity": "minor",
+        "evidence": "Neither HTML file contains a \u2018skip to content\u2019 link or similar mechanism to move focus directly to main content (no visible first-link like <a href=\"#main\">Skip</a> and main has no id used for skipping).",
+        "risk": "Keyboard and assistive-device users must tab through the header navigation on every page load, which increases time-to-content and friction on mobile keyboards or external keyboards paired to mobile devices.",
+        "recommended_change": "Add a skip link (visually hidden off-screen by default and visible on focus) pointing to the main element (give main an id) so users can jump straight to page content."
+      },
+      {
+        "severity": "minor",
+        "evidence": ".stat-value is styled with color: var(--coral) on card backgrounds that are white (stat-value { color: var(--coral); } and .card background: white). .notice uses border-left: 4px solid var(--coral) on a pale background.",
+        "risk": "Emphasis that relies primarily on a color (var(--coral)) may have insufficient contrast for some users or be lost to users with color deficiencies; numeric emphasis should remain perceivable to all users.",
+        "recommended_change": "Verify text/background contrast for var(--coral) and adjust if it falls below accessibility thresholds. Where possible, pair color emphasis with non-color cues (larger font-size, bold weight, icons, or borders) \u2014 note stat-value already uses large weight/size which helps, but contrast should be validated."
+      },
+      {
+        "severity": "minor",
+        "evidence": "Navigation is a bare set of anchor elements in the header (nav contains a sequence of <a> elements without an ordered list or increased hit-area), and there is no visible focus styling or skip link to aid keyboard navigation.",
+        "risk": "While semantics are present, small structural improvements (skip link, clearer grouping or increased hit areas) would reduce friction for users relying on keyboard navigation on mobile devices.",
+        "recommended_change": "Consider grouping nav items in a semantic list (<ul><li>) for clearer structure and add spacing/padding and focus styles to improve discoverability and operability for keyboard users."
+      }
+    ],
+    "limitations": [
+      "Review limited to static source files provided (docs/index.html, docs/case-study.html, docs/site.css).",
+      "No testing on a physical mobile device, touchscreen, or with assistive technologies (screen readers) was performed.",
+      "No automated contrast calculation or runtime interaction testing was performed; recommendations are based on the static HTML/CSS observed."
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 3631,
+    "completion_tokens": 3889
+  }
+}

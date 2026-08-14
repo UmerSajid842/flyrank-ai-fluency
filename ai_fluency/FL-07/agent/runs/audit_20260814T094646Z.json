@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-08-14T09:46:46.599945+00:00",
+  "model": "gpt-5-mini",
+  "candidate": "This production system automatically chooses content for every client.",
+  "live_site_check": {
+    "reachable": true,
+    "status_code": 200,
+    "url": "https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/"
+  },
+  "result": {
+    "action": "BLOCK",
+    "reason": "The approved evidence explicitly frames the work as a prototype and case study, not a production deployment. The portfolio rules prohibit saying the project was productionised, and the packet requires avoiding claims that imply production deployment or broad client coverage. The phrase \u201cproduction system\u201d and \u201cfor every client\u201d therefore misrepresents the project and is unsupported by the provided evidence.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "APPROVED CASE-STUDY CONTEXT \u2014 Primary case study: 'The project investigates whether public-safe content signals can help prioritise which content should be reviewed first. It is a prototype and case study, not a production deployment or a claim of causal business impact.'",
+      "APPROVED CASE-STUDY CONTEXT \u2014 Portfolio writing rules: 'Never say the project was productionised, improved SEO, increased revenue, or caused client outcomes.'",
+      "CURRENT PUBLIC HOME SOURCE \u2014 page text: 'A public-safe prototype that evaluates whether content signals can rank which items deserve review first.'"
+    ],
+    "human_review_required": true
+  },
+  "authority_boundary": "Advisory only. No content was edited, deployed, posted, emailed, or published."
+}

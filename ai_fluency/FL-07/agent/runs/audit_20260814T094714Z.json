@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-08-14T09:47:14.534652+00:00",
+  "model": "gpt-5-mini",
+  "candidate": "The model reported Precision@50 of 0.540.",
+  "live_site_check": {
+    "reachable": false,
+    "status_code": null,
+    "url": "https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/",
+    "error": "Live check skipped by operator."
+  },
+  "result": {
+    "action": "NEED_EVIDENCE",
+    "reason": "The required read-only check could not confirm that the public ML Work URL is reachable. Verify the deployment before using this wording in a public update.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "Live URL reachability check"
+    ],
+    "human_review_required": true
+  },
+  "authority_boundary": "Advisory only. No content was edited, deployed, posted, emailed, or published."
+}

@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-08-14T09:47:12.894099+00:00",
+  "model": "gpt-5-mini",
+  "candidate": "Client Acme's content was the worst performer.",
+  "live_site_check": {
+    "reachable": true,
+    "status_code": 200,
+    "url": "https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/"
+  },
+  "result": {
+    "action": "BLOCK",
+    "reason": "The candidate appears to name a client or customer. Use public-safe aggregate wording instead.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "Local client-identifier guardrail"
+    ],
+    "human_review_required": true
+  },
+  "authority_boundary": "Advisory only. No content was edited, deployed, posted, emailed, or published."
+}

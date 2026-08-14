@@ -1,0 +1,14 @@
+{
+  "result": {
+    "action": "REVISE",
+    "reason": "The sentence makes an absolute workflow-wide claim that exceeds the verified prototype scope.",
+    "safe_rewrite": "I built a leakage-aware prototype that evaluates public-safe content signals for a clearer prioritisation decision.",
+    "evidence_used": [
+      "Approved case-study scope guardrail"
+    ],
+    "human_review_required": true
+  },
+  "record": "/home/ubuntu/flyrank-ai-fluency/ai_fluency/FL-07/agent/runs/audit_20260814T094810Z.json"
+}
+
+Human review required: this tool has not edited, deployed, posted, emailed, or published anything.

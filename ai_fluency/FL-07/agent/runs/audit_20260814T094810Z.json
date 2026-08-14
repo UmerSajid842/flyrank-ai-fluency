@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-08-14T09:48:10.331605+00:00",
+  "model": "gpt-5-mini",
+  "candidate": "My AI system transforms every content workflow.",
+  "live_site_check": {
+    "reachable": true,
+    "status_code": 200,
+    "url": "https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/"
+  },
+  "result": {
+    "action": "REVISE",
+    "reason": "The sentence makes an absolute workflow-wide claim that exceeds the verified prototype scope.",
+    "safe_rewrite": "I built a leakage-aware prototype that evaluates public-safe content signals for a clearer prioritisation decision.",
+    "evidence_used": [
+      "Approved case-study scope guardrail"
+    ],
+    "human_review_required": true
+  },
+  "authority_boundary": "Advisory only. No content was edited, deployed, posted, emailed, or published."
+}

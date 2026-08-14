@@ -1,0 +1,23 @@
+{
+  "timestamp_utc": "2026-08-14T09:47:42.705947+00:00",
+  "model": "gpt-5-mini",
+  "candidate": "My AI system transforms every content workflow.",
+  "live_site_check": {
+    "reachable": true,
+    "status_code": 200,
+    "url": "https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/"
+  },
+  "result": {
+    "action": "BLOCK",
+    "reason": "This sentence asserts a universal, productionized capability (\u201cMy AI system transforms every content workflow\u201d) that is not supported by the evidence packet. The approved materials describe an entry-level, public-safe prototype and explicitly forbid claims of production deployment or causal business impact. The portfolio guidance requires precise language (prototype, reported evaluation, held-out clients) and to avoid statements implying production or universal outcomes.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "Primary case study \u2014 Decision problem: prototype investigating whether public-safe content signals can help prioritise which content should be reviewed first. This is a prototype and case study, not a production deployment or a claim of causal business impact.",
+      "Primary case study \u2014 Verified result: reported Precision@50 values (model 0.540 vs baseline 0.340) are model-evaluation results, not revenue, traffic, or business-outcome claims.",
+      "Approved portfolio claim: I build inspectable ML prototypes that turn messy content signals into a clearer prioritisation decision.",
+      "Portfolio writing rules: Never say the project was productionised, improved SEO, increased revenue, or caused client outcomes; use precise language: prototype, reported evaluation, held-out clients, Precision@50, and public-safe."
+    ],
+    "human_review_required": true
+  },
+  "authority_boundary": "Advisory only. No content was edited, deployed, posted, emailed, or published."
+}

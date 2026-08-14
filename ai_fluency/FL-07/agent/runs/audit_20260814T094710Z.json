@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-08-14T09:47:10.998424+00:00",
+  "model": "gpt-5-mini",
+  "candidate": "The model achieved 92% accuracy.",
+  "live_site_check": {
+    "reachable": true,
+    "status_code": 200,
+    "url": "https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/"
+  },
+  "result": {
+    "action": "NEED_EVIDENCE",
+    "reason": "The approved evidence packet does not contain or support the claim \u201cThe model achieved 92% accuracy.\u201d The project\u2019s verified, public-safe reported evaluation is Precision@50 (model 0.540 vs baseline 0.340 across seven held-out clients). No accuracy metric of 92% appears in the provided case-study materials. Provide verifiable evidence for the 92% accuracy claim or state the reported Precision@50 result instead.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "Primary case study \u2014 Verified result (Precision@50: 0.540 for the model vs 0.340 baseline across seven held-out clients)",
+      "Live case-study paper (https://umersajid842.github.io/flyrankmlproject/)",
+      "Capstone report (https://github.com/UmerSajid842/flyrankmlproject/blob/main/work/capstone_report.md)"
+    ],
+    "human_review_required": true
+  },
+  "authority_boundary": "Advisory only. No content was edited, deployed, posted, emailed, or published."
+}

@@ -1,0 +1,14 @@
+{
+  "result": {
+    "action": "BLOCK",
+    "reason": "The candidate appears to name a client or customer. Use public-safe aggregate wording instead.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "Local client-identifier guardrail"
+    ],
+    "human_review_required": true
+  },
+  "record": "/home/ubuntu/flyrank-ai-fluency/ai_fluency/FL-07/agent/runs/audit_20260814T094629Z.json"
+}
+
+Human review required: this tool has not edited, deployed, posted, emailed, or published anything.

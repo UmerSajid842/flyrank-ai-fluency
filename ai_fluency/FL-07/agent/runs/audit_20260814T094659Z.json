@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-08-14T09:46:59.250095+00:00",
+  "model": "gpt-5-mini",
+  "candidate": "My AI system transforms every content workflow.",
+  "live_site_check": {
+    "reachable": true,
+    "status_code": 200,
+    "url": "https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/"
+  },
+  "result": {
+    "action": "BLOCK",
+    "reason": "The sentence claims a universal, production-level effect (\u201ctransforms every content workflow\u201d) and presents an unsupported causal/operational claim about an AI system. The approved evidence describes a prototype and reported evaluation (Precision@50 results) and explicitly forbids production, client-impact, or causal business-outcome claims. The wording is broader than the documented prototype work and is not supported by the evidence packet.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "Approved portfolio claim: \"I build inspectable ML prototypes that turn messy content signals into a clearer prioritisation decision.\"",
+      "Primary case study: Leakage-aware content-prioritisation prototype (prototype, not production)",
+      "Primary case study: Verified result (Precision@50 reported evaluation)",
+      "Portfolio writing rules: Never say the project was productionised, improved SEO, increased revenue, or caused client outcomes",
+      "Method principles: Name the prototype boundary and limitations clearly"
+    ],
+    "human_review_required": true
+  },
+  "authority_boundary": "Advisory only. No content was edited, deployed, posted, emailed, or published."
+}

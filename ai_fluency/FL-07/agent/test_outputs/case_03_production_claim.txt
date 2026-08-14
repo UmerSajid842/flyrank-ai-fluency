@@ -1,0 +1,16 @@
+{
+  "result": {
+    "action": "BLOCK",
+    "reason": "The approved evidence explicitly frames the work as a prototype and case study, not a production deployment. The portfolio rules prohibit saying the project was productionised, and the packet requires avoiding claims that imply production deployment or broad client coverage. The phrase \u201cproduction system\u201d and \u201cfor every client\u201d therefore misrepresents the project and is unsupported by the provided evidence.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "APPROVED CASE-STUDY CONTEXT \u2014 Primary case study: 'The project investigates whether public-safe content signals can help prioritise which content should be reviewed first. It is a prototype and case study, not a production deployment or a claim of causal business impact.'",
+      "APPROVED CASE-STUDY CONTEXT \u2014 Portfolio writing rules: 'Never say the project was productionised, improved SEO, increased revenue, or caused client outcomes.'",
+      "CURRENT PUBLIC HOME SOURCE \u2014 page text: 'A public-safe prototype that evaluates whether content signals can rank which items deserve review first.'"
+    ],
+    "human_review_required": true
+  },
+  "record": "/home/ubuntu/flyrank-ai-fluency/ai_fluency/FL-07/agent/runs/audit_20260814T094646Z.json"
+}
+
+Human review required: this tool has not edited, deployed, posted, emailed, or published anything.

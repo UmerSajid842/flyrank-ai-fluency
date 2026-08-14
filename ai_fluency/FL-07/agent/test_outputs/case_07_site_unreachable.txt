@@ -1,0 +1,14 @@
+{
+  "result": {
+    "action": "NEED_EVIDENCE",
+    "reason": "The required read-only check could not confirm that the public ML Work URL is reachable. Verify the deployment before using this wording in a public update.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "Live URL reachability check"
+    ],
+    "human_review_required": true
+  },
+  "record": "/home/ubuntu/flyrank-ai-fluency/ai_fluency/FL-07/agent/runs/audit_20260814T094714Z.json"
+}
+
+Human review required: this tool has not edited, deployed, posted, emailed, or published anything.

@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-08-14T09:46:05.598655+00:00",
+  "model": "gpt-5-mini",
+  "candidate": "On seven held-out clients, the model reported Precision@50 of 0.540 versus 0.340 for the baseline.",
+  "live_site_check": {
+    "reachable": true,
+    "status_code": 200,
+    "url": "https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/"
+  },
+  "result": {
+    "action": "ALLOW",
+    "reason": "The exact Precision@50 comparison for seven held-out clients is explicitly stated in the approved case-study evidence (verified result) and appears on the public site. The claim is a model-evaluation result and matches the approved wording in the evidence packet.",
+    "safe_rewrite": "",
+    "evidence_used": [
+      "APPROVED CASE-STUDY CONTEXT \u2014 Primary case study (Verified result)",
+      "CURRENT PUBLIC HOME SOURCE (site HTML) \u2014 stat-value and stat-label showing 0.540 vs 0.340 across seven held-out clients"
+    ],
+    "human_review_required": true
+  },
+  "authority_boundary": "Advisory only. No content was edited, deployed, posted, emailed, or published."
+}

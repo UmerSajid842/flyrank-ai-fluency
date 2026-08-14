@@ -35,7 +35,10 @@ The following metadata hardening was added locally to `index.html`, `case-study.
 | Live rapid-repeat repository check | On the deployed case-study page, two immediate programmatic activations were attempted. The button was disabled immediately after the first activation; the second activation did not create a concurrent request. The first request returned the success state, then the button reset. |
 | Live repository-check result | The deployed control reported that `UmerSajid842/flyrankmlproject` is public, its default branch is `main`, and GitHub returned a current update timestamp. |
 
-The metadata changes are ready to publish and recheck on the live deployment before submission.
+## Post-publication check
+
+The metadata hardening was published in commit `c4e6786`. On the live homepage, the canonical URL, Open Graph type/title/description/URL, and Twitter card/title/description were all present and matched the published page. The deployed homepage also remained reachable and readable after the update.
+
 
 
 ## Known limitations retained intentionally

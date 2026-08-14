@@ -8,7 +8,7 @@
 
 **MarsVision AI: Intelligent Habitat Site Recommendation for Future Human Exploration of Mars**
 
-This is the next intended ML Work case study. It will be added only when there is real project work, public-safe evidence, and an honest result to show. This plan does not claim that MarsVision AI is already built, evaluated, or publicly deployed.
+This is the next intended ML Work case study. Umer’s supplied MarsHab research workbook documents an active literature-review and problem-framing stage; its public-safe summary is available in [MarsHab research-stage evidence](mars_hab_research_evidence_summary.md). The case will be added only when there is real project work, public-safe evidence, and an honest result to show. This plan does not claim that MarsVision AI is already built, evaluated, or publicly deployed.
 
 ## Where the next case study will go
 

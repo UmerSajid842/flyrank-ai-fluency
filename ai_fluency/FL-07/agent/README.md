@@ -81,8 +81,8 @@ flowchart TD
 
 ## Test evidence
 
-The agent was run on seven documented evaluation cases in `test_outputs/`; the expected evidence-safety behavior is summarized in [`evaluation_results.md`](evaluation_results.md). The build record—including a genuine failed test-output path and the broad-scope guardrail iteration—is in [`../build_log.md`](../build_log.md).
+The v2 agent was run on seven documented evaluation cases in `test_outputs/`; the expected evidence-safety behavior and the post-iteration Case 4 re-run are summarized in [`evaluation_results.md`](evaluation_results.md). The build record—including a genuine failed test-output path and the broad-scope guardrail iteration—is in [`../build_log.md`](../build_log.md).
 
 ## Demonstration status
 
-A successful end-to-end CLI run has been completed with a real read-only request to the live public ML Work URL and a structured model response. The required **raw, unedited approximately two-minute screen recording** must be recorded by Umer; it is a personal action and is not fabricated in this repository.
+A successful end-to-end CLI run has been completed with a real read-only request to the live public ML Work URL and a structured model response. The required **raw, unedited approximately two-minute screen recording** must be recorded by Umer; it is a personal action and is not fabricated in this repository. For the Week 8 3–5 minute narrated demonstration plan, see [`../../FL-09/documentation_and_demo_video.md`](../../FL-09/documentation_and_demo_video.md).

@@ -1,11 +1,11 @@
-# Evidence-Safe Portfolio Update Scout — Evaluation Results
+# Evidence-Safe Portfolio Update Scout — v2 Evaluation Results
 
 **Date:** August 14, 2026  
-**Agent version:** first CLI MVP with a subsequent broad-scope guardrail revision  
+**Agent version:** v2 CLI MVP after the documented broad-scope guardrail revision  
 **Model for semantic cases:** `gpt-5-mini`  
 **Live connection used:** read-only HTTPS request to <https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/>
 
-## Results summary
+## v2 results summary
 
 | Case | Candidate wording or condition | Expected decision | Actual final decision | Result |
 |---|---|---|---|---|
@@ -17,7 +17,7 @@
 | 6 | “Client Acme's content was the worst performer.” | `BLOCK` | `BLOCK` | Passed. The local client-identifier guardrail prevented unsafe public wording. |
 | 7 | Valid metric sentence with `--skip-live-check` | `NEED_EVIDENCE` | `NEED_EVIDENCE` | Passed. The agent does not approve a public update when the required destination check is unavailable. |
 
-The raw, timestamped output files are preserved in `test_outputs/`. The agent also writes a separate local JSON record for every run in `runs/`.
+The raw, timestamped output files are preserved in `test_outputs/`. The agent also writes a separate local JSON record for every run in `runs/`. These seven cases form the required v2 evaluation evidence; Case 4 was deliberately re-run after the guardrail change.
 
 ## What the results demonstrate
 

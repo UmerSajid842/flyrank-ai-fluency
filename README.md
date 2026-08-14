@@ -23,6 +23,11 @@ This repository contains my public-safe work for the **General AI Fluency** trac
 | FL-06 — Design Your Personal Agent | Narrow evidence-safety agent design, realistic data-access plan, evaluation cases, and guardrails | `ai_fluency/FL-06/` |
 | FL-07 — Build the Agent | Working read-only evidence-safety CLI, structured audit outputs, real public URL check, evaluation records, and build log; raw screen recording remains user-dependent | `ai_fluency/FL-07/` |
 | PF-04 — Personal Website Live | Live ML Work site plus a four-section DNS/custom-domain walkthrough; custom domain and unprovided professional links are explicitly pending | `ai_fluency/PF-04/` |
+| Week 6 — Explain It Like You Built It | Own-words explanation of the live site's shared structure, navigation, and deployment, with a documented user learning check pending | `ai_fluency/CUSTOM-MQX0CE9V-B5BB265F/` |
+| Week 6 — Survive the Crit | Honest critique-request and feedback-capture template; a real reviewer’s feedback and corresponding fixes remain user-dependent | `ai_fluency/CUSTOM-MQX0GQO7-2D98A882/` |
+| Week 7 — Open It on Your Phone | Public accessibility improvements, structured AI audit, deterministic contrast check, and fix log; final real-phone test remains user-dependent | `ai_fluency/CUSTOM-MQX0F1Q7-8C275C69/` |
+| Week 8 — Make It Do Something | Live, read-only GitHub repository-status feature with a verified public HTTPS test and plain-language data-flow documentation | `ai_fluency/CUSTOM-MQX0KCLI-2775152F/` |
+| FL-09 — Documentation and Demo Video | Agent README, v2 evaluation evidence, and an honest recording plan; the required unedited narrated video remains user-dependent | `ai_fluency/FL-09/` |
 
 ## Repository structure
 
@@ -44,6 +49,11 @@ ai_fluency/
 ├── FL-06/                      # Personal-agent design specification
 ├── FL-07/                      # Working evidence-safety agent and test records
 ├── PF-04/                      # DNS and custom-domain walkthrough
+├── CUSTOM-MQX0CE9V-B5BB265F/   # Week 6 build explanation
+├── CUSTOM-MQX0GQO7-2D98A882/   # Week 6 real-review capture template
+├── CUSTOM-MQX0F1Q7-8C275C69/   # Week 7 accessibility audit and fix log
+├── CUSTOM-MQX0KCLI-2775152F/   # Week 8 live repository-check feature
+├── FL-09/                      # Agent documentation and demo plan
 └── _evidence/                  # Raw, public-safe model-output evidence
 ```
 

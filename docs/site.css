@@ -91,6 +91,18 @@ section { padding: 4rem 0; border-top: 1px solid var(--line); }
 .grid { display: grid; gap: 1.5rem; }
 .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .card { padding: 1.6rem; border: 1px solid var(--line); background: white; border-radius: .35rem; }
+.outcome-highlight {
+  padding: clamp(1.5rem, 4vw, 2.6rem);
+  border-left: .5rem solid var(--coral);
+  background: var(--ink);
+  color: white;
+}
+.outcome-highlight .section-kicker { margin-top: 0; color: #9de3d9; }
+.outcome-highlight h2 { max-width: 25ch; color: white; }
+.outcome-highlight p { color: #e2e9ef; }
+.outcome-highlight .outcome-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 1.25rem; }
+.outcome-highlight .outcome-number { display: block; margin-bottom: .25rem; color: #ff9f8a; font-size: clamp(2.35rem, 6vw, 4.3rem); font-weight: 800; line-height: 1; letter-spacing: -.06em; }
+.outcome-highlight .caption { color: #c9d5df; }
 .card p { margin: .6rem 0 0; color: var(--muted); }
 .stat { padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
 .stat-value { color: #B64231; font-size: clamp(2.7rem, 8vw, 5.7rem); font-weight: 800; line-height: 1; letter-spacing: -.06em; }
@@ -121,7 +133,8 @@ button.button:disabled { cursor: wait; opacity: .72; }
 @media (max-width: 43rem) {
   .site-header { align-items: flex-start; flex-direction: column; }
   nav { justify-content: flex-start; }
-  .grid.two { grid-template-columns: 1fr; }
+  .grid.two,
+  .outcome-highlight .outcome-grid { grid-template-columns: 1fr; }
   section { padding: 3rem 0; }
 }
 

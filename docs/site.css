@@ -109,6 +109,13 @@ section { padding: 4rem 0; border-top: 1px solid var(--line); }
   min-height: 2.75rem;
   font-weight: 750;
 }
+.live-check { margin-top: 1.6rem; padding: 1.25rem; border: 1px solid var(--line); background: white; }
+.live-check h3 { margin-top: 0; }
+.live-check p { color: var(--muted); }
+button.button { border: 0; cursor: pointer; font: inherit; }
+button.button:disabled { cursor: wait; opacity: .72; }
+.live-output { margin-bottom: 0; padding: .8rem 1rem; border-left: 4px solid var(--teal); background: #edf8f6; }
+.live-output[data-state="error"] { border-left-color: #B64231; background: #fff4f0; color: #4d2d26; }
 .site-footer { width: min(100% - 2.25rem, var(--max)); margin: 0 auto; padding: 2rem 0 3rem; color: var(--muted); font-size: .85rem; }
 
 @media (max-width: 43rem) {

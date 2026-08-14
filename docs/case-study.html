@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Leakage-aware content-prioritisation prototype by Umer Sajid.">
+  <title>Case Study | Umer Sajid ML Work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Umer Sajid <span>/</span> ML Work</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="case-study.html" aria-current="page">Case study</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Case study / content prioritisation</p>
+      <h1>Rank review candidates with public-safe signals.</h1>
+      <p class="lede">This leakage-aware prototype investigates whether content signals can help prioritise which items should be reviewed first. It is a case study, not a production system.</p>
+      <div class="actions">
+        <a class="button primary" href="https://umersajid842.github.io/flyrankmlproject/">Read the full paper</a>
+        <a class="button secondary" href="https://github.com/UmerSajid842/flyrankmlproject">Inspect the repository</a>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">Reported result</p>
+      <div class="grid two">
+        <div class="card">
+          <div class="stat-value">0.540</div>
+          <p class="stat-label">Reported Precision@50 for the model across seven held-out clients.</p>
+        </div>
+        <div class="card">
+          <div class="stat-value">0.340</div>
+          <p class="stat-label">Reported Precision@50 for the baseline on the same evaluation framing.</p>
+        </div>
+      </div>
+      <div class="notice">The comparison is a model-evaluation result. It does not demonstrate production deployment, SEO improvement, revenue impact, traffic change, or causality.</div>
+    </section>
+
+    <section>
+      <img class="case-visual" src="assets/precision_at_50_real_capture.png" alt="Real capstone chart comparing baseline Precision at 50 of 0.340 with model Precision at 50 of 0.540.">
+      <p class="caption">Real capture from the public capstone analysis. It is used as evidence rather than an AI-generated visual.</p>
+    </section>
+
+    <section>
+      <p class="section-kicker">Method in brief</p>
+      <div class="prose">
+        <h2>What was tested</h2>
+        <p>The prototype uses public-safe content signals to evaluate a ranking decision: which items should be considered first for review. The evaluation intentionally uses leakage-aware controls and reports the model comparison on held-out clients.</p>
+        <h2>How to inspect it</h2>
+        <p>The public paper provides the full case-study narrative. The repository and report provide the project record and methodology. The linked evidence is more meaningful than a broad claim about business outcomes.</p>
+        <div class="link-list">
+          <a href="https://umersajid842.github.io/flyrankmlproject/">Open the public case-study paper</a>
+          <a href="https://github.com/UmerSajid842/flyrankmlproject/blob/main/work/capstone_report.md">Read the capstone report</a>
+          <a href="https://github.com/UmerSajid842/flyrankmlproject">Browse the code repository</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">Limitations</p>
+      <div class="prose">
+        <h2>What this does not claim</h2>
+        <ul>
+          <li>It does not identify or publish any client or client-level data.</li>
+          <li>It does not claim deployment in a production workflow.</li>
+          <li>It does not attribute SEO, traffic, revenue, or business outcomes to the model.</li>
+          <li>It is a prototype evaluation that should be reviewed further before any operational use.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">© Umer Sajid · <a href="index.html">ML Work home</a></footer>
+</body>
+</html>

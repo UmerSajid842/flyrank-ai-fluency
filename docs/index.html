@@ -3,44 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Public ML work and separate AI work references for Umer Sajid.">
+  <meta name="description" content="Umer Sajid’s public ML Work: an evidence-led content-prioritisation case study.">
   <title>Umer Sajid | ML Work</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --teal: #0F766E;
-      --ink: #172033;
-      --paper: #FAFAF8;
-      --coral: #F9735B;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 1.5rem;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "Manrope", system-ui, sans-serif;
-    }
-    main { width: min(100%, 44rem); }
-    .eyebrow { color: var(--teal); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    h1 { margin: .5rem 0 1rem; font-size: clamp(2.2rem, 9vw, 4.5rem); letter-spacing: -.06em; line-height: .98; }
-    p { max-width: 35rem; margin: 0; font-size: 1rem; line-height: 1.65; }
-    a { display: inline-block; margin-top: 1.25rem; margin-right: 1.25rem; color: var(--teal); font-weight: 700; text-underline-offset: .22em; }
-    .mark { color: var(--coral); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Umer Sajid <span>/</span> ML Work</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="case-study.html">Case study</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+  </header>
   <main>
-    <div class="eyebrow">Umer Sajid <span class="mark">/</span> ML Work</div>
-    <h1>Building a clear, evidence-led ML case study.</h1>
-    <p>This page is for public machine-learning work. AI Work—including the AI Fluency assignments—remains separate and is linked below.</p>
-    <a href="https://umersajid842.github.io/flyrankmlproject/">View ML case study</a>
-    <a href="https://github.com/UmerSajid842/flyrank-ai-fluency">View AI Work</a>
+    <section class="hero">
+      <p class="eyebrow">Evidence-led machine learning work</p>
+      <h1>I build inspectable ML prototypes.</h1>
+      <p class="lede">I turn messy content signals into a clearer prioritisation decision, then make the method, result, and limitations easy to inspect.</p>
+      <div class="actions">
+        <a class="button primary" href="case-study.html">Open the case study</a>
+        <a class="button secondary" href="https://github.com/UmerSajid842/flyrankmlproject">Inspect the code</a>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">Featured work</p>
+      <div class="grid two">
+        <div>
+          <h2>Leakage-aware content prioritisation</h2>
+          <p class="lede">A public-safe prototype that evaluates whether content signals can rank which items deserve review first.</p>
+          <div class="actions">
+            <a class="button primary" href="case-study.html">See method and result</a>
+          </div>
+        </div>
+        <div class="card">
+          <p class="section-kicker">Reported evaluation</p>
+          <div class="stat-value">0.540</div>
+          <p class="stat-label">Precision@50 for the model, compared with <strong>0.340</strong> for the baseline across seven held-out clients.</p>
+          <p class="caption">This is a model-evaluation result, not a production, revenue, traffic, or causal-impact claim.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">How I work</p>
+      <div class="grid two">
+        <article class="card">
+          <h3>Make the decision inspectable</h3>
+          <p>Lead with the decision problem and link the public paper, report, charts, and repository so the work can be checked.</p>
+        </article>
+        <article class="card">
+          <h3>Name the boundary</h3>
+          <p>Keep the data framing public-safe, state evaluation limits, and avoid claims that the evidence does not support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">Separate workspaces</p>
+      <h2>ML Work and AI Work stay distinct.</h2>
+      <p class="prose">This site focuses on the public machine-learning case study. The separate <a href="https://github.com/UmerSajid842/flyrank-ai-fluency">AI Work repository</a> contains AI Fluency assignments, workflow documentation, and the portfolio’s identity system.</p>
+    </section>
   </main>
+  <footer class="site-footer">© Umer Sajid · Public-safe ML Work · August 2026</footer>
 </body>
 </html>

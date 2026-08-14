@@ -34,9 +34,13 @@ The second observation is a genuine mobile usability finding. I treated the head
 
 | User-reported issue | Change made | Intended effect | Verification status |
 |---|---|---|---|
-| Some elements felt slightly cramped on the smaller phone screen. | Increased the narrow-screen usable width from `100% - 2.25rem` to `100% - 1.5rem` for the header, main content, and footer. | Gives text and controls 0.75rem more total horizontal room without touching the desktop layout. | Awaiting public deployment check. |
-| The five-link navigation could feel dense in a single wrapping row. | Changed navigation at `≤ 34rem` to a full-width, two-column grid with a `0.65rem` gap, visible control boundaries, and `3.1rem` minimum link height. | Separates choices visually and improves touch comfort while retaining every navigation destination. | Awaiting public deployment check. |
-| The two hero actions could feel crowded beside each other. | Stacked hero actions into a single column with a `0.9rem` gap; each action is full width and at least `3.25rem` high. | Makes each call to action easier to target and read on a narrow screen. | Awaiting public deployment check. |
+| Some elements felt slightly cramped on the smaller phone screen. | Increased the narrow-screen usable width from `100% - 2.25rem` to `100% - 1.5rem` for the header, main content, and footer. | Gives text and controls 0.75rem more total horizontal room without touching the desktop layout. | Verified on the published site at a 390-pixel-wide render. |
+| The five-link navigation could feel dense in a single wrapping row. | Changed navigation at `≤ 34rem` to a full-width, two-column grid with a `0.65rem` gap, visible control boundaries, and `3.1rem` minimum link height. | Separates choices visually and improves touch comfort while retaining every navigation destination. | Verified on the published site: all five links appear as spaced two-column controls without horizontal clipping. |
+| The two hero actions could feel crowded beside each other. | Stacked hero actions into a single column with a `0.9rem` gap; each action is full width and at least `3.25rem` high. | Makes each call to action easier to target and read on a narrow screen. | Verified on the published site: both actions are full-width, separated, and visible. |
+
+## Published-site verification
+
+After commit `c9565c6` was pushed to `main`, I confirmed that the public site served the new `@media (max-width: 34rem)` stylesheet rules. I rendered the live URL at a 390 × 844 pixel viewport. The header brand, all five navigation links, heading, body copy, and both hero actions were visible without horizontal clipping. The navigation rendered as five spacious two-column controls, and the hero actions rendered as separately spaced full-width controls. The desktop page retained its flex navigation and side-by-side actions.
 
 ## Evidence files
 
@@ -46,6 +50,7 @@ The second observation is a genuine mobile usability finding. I treated the head
 | `phone_screenshots/phone-featured-work.jpeg` | User-provided Android capture of the deployed featured-work section. |
 | `phone_screenshots/phone-method-and-ai-work.jpeg` | User-provided Android capture of the deployed method and AI Work section. |
 | `phone_evidence_observation.md` | Bounded observations from the three real-phone screenshots. |
+| `post_fix_live_render_390.png` | Post-fix desktop-browser render of the published page at a 390 × 844 pixel viewport; supporting layout verification, not presented as a physical-phone screenshot. |
 | `run_accessibility_audit.py` | Reproducible structured source-audit script. |
 | `ai_accessibility_audit_before_fixes.json` | Raw initial audit output. |
 | `ai_accessibility_audit.json` | Raw audit output after the first applied improvements. |

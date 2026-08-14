@@ -32,6 +32,7 @@ A portfolio can become less trustworthy when a real technical result is describe
 | [Agent source and run guide](https://github.com/UmerSajid842/flyrank-ai-fluency/tree/main/ai_fluency/FL-07/agent) | The actual Python CLI, bounded actions, public-safe inputs, and reproducible local run instructions. |
 | [Build log](https://github.com/UmerSajid842/flyrank-ai-fluency/blob/main/ai_fluency/FL-07/build_log.md) | A documented scope cut, real setup failure, and guardrail iteration. |
 | [Evaluation results](https://github.com/UmerSajid842/flyrank-ai-fluency/blob/main/ai_fluency/FL-07/agent/evaluation_results.md) | Seven documented cases that cover supported wording, overclaims, privacy, unavailable deployment, and the post-iteration revision case. |
+| [Current capstone verification](capstone_verification.md) | A new end-to-end run: syntax check passed, the fixed public URL returned HTTP 200, the verified candidate received `ALLOW`, and human review remained required. |
 | [Public ML Work case study](https://flyrank-ai-fluency-public-site-umer-sajids-projects.vercel.app/case-study.html) | The public evidence base the agent is designed to protect. |
 
 ## Boundaries and limitations

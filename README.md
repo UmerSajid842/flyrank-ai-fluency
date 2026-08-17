@@ -2,6 +2,27 @@
 
 This repository contains my public-safe work for the **General AI Fluency** track in the FlyRank internship. Each assignment is organized by its FlyRank code and includes only materials that can be shared publicly. Raw data, client-identifying information, passwords, account credentials, access tokens, and private screenshots are excluded.
 
+## My Engineering Work
+
+During the FlyRank AI Fluency track, I designed and implemented public-safe workflows for using AI in research, software development, documentation, portfolio maintenance, and evaluation. The main engineering artifact is a read-only evidence-safety CLI that checks approved evidence packets and portfolio content, performs a live public-URL check, applies deterministic guardrails for secrets and scope, and produces structured audit outcomes such as `ALLOW`, `REVISE`, `BLOCK`, or `NEED_EVIDENCE`.
+
+The repository also records how I evaluated prompts, designed an evidence boundary, documented MCP and agent concepts, built and audited a personal ML portfolio site, performed accessibility checks, and integrated a live read-only GitHub repository-status feature. Personal-account screenshots, credentials, private client information, and unverified claims are intentionally excluded.
+
+### Featured Evidence
+
+| Work | Evidence | Professional signal |
+|---|---|---|
+| Evidence-Safe Portfolio Update Scout | `ai_fluency/FL-07/agent/` | Read-only agent design, guardrails, structured outputs, and evaluation records. |
+| Automation Workflow v2 | `ai_fluency/FL-04/` | Reproducible source-to-draft-to-audit workflow with run records and human checks. |
+| Agent Concepts and MCP Basics | `ai_fluency/FL-05/` | Clear explanation of agent scope, authenticated tool evidence, and safe upgrade paths. |
+| Personal Agent Design | `ai_fluency/FL-06/` | Narrow scope, evidence-safety plan, evaluation cases, and guardrails. |
+| Documentation and Demo Plan | `ai_fluency/FL-09/` | Agent README, evaluation evidence, limitations, and honest recording plan. |
+| Accessibility and GitHub feature work | Week 7 and Week 8 folders | Deterministic contrast checks, fix logs, public URL validation, and read-only API integration. |
+
+### Recruiter Summary
+
+This repository demonstrates practical AI engineering judgment: narrowing scope before automation, separating public evidence from private account data, adding deterministic checks around model output, recording failures and limitations, and keeping human approval in the loop for consequential portfolio changes.
+
 ## Assignment index
 
 | Assignment | Status | Evidence |
